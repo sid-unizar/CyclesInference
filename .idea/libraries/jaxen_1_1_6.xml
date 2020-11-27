@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="jaxen-1.1.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/lib/jaxen-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/lib/xercesImpl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/lib/xml-apis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/jdom-2.0.5-contrib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/jdom-2.0.5-junit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/jdom-2.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/jdom-2.0.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Algoritmo OTIC/lib/lib/jdom_2.0.5/jdom-2.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
