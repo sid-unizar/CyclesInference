@@ -15,12 +15,12 @@ import apertiumV2.GetDataV2;
 public class calculateCycles {
 	
 	/**
-	 * Given a root word and its context identify and evaluate potential targets.
-	 * Context contains the list of translation pairs computed by GetData.java
+	 * Given a root 'word' and its 'context' identify and evaluate potential targets.
+	 * Context contains the list of translation pairs computed by the class apertium.GetData
 	 * Potential targets are those words in the graph that:
 	 * (i) occur in some cycle together with the root word and
-	 * (ii) are not linked to the root.
-	 * 
+	 * (ii) are not (directly) linked to the root.
+	 * Then, write the results in a file ('writer')
 	 */	
 	public static void getCycles(String word, Context context, String lang1, String lang2, PrintWriter writer) {
 		if (!context.getPairs().isEmpty()) {
