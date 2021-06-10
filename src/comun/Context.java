@@ -2,7 +2,13 @@ package comun;
 
 import java.util.ArrayList;
 
-
+/**
+ * Class to represent the chain of translations that starts from a certain root term,
+ * as a list of "translatable pairs"
+ * 
+ * @author M. Lanau
+ *
+ */
 public class Context {
 	
 	String root;

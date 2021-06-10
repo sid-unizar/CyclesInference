@@ -4,6 +4,11 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
+/**
+ * Class to represent a translation between source label and target label, with their part of speech
+ * 
+ *  @author M. Lanau and J. Gracia
+ */
 public class TranslatablePair{
 	
 	final static String SEPARATOR = "', '";

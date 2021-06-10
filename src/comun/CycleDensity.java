@@ -5,6 +5,14 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 
+/**
+ * Class to store a 'cycle' to which a certain 'term' belongs to, along with the
+ * density ('score') of such a cycle. 
+ *  
+ * @author M. Lanau
+ *
+ */
+
 public class CycleDensity {
 	
 	String target;
