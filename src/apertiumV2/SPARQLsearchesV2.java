@@ -32,8 +32,8 @@ public class SPARQLsearchesV2 {
 				"PREFIX lime: <http://www.w3.org/ns/lemon/lime#>" + 
 				"SELECT DISTINCT ?source ?target ?pos" + 
 				"\nWHERE {" + 
-				//"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
-				//"    {" + 
+				"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
+				"    {" + 
 				"   ?form_source ontolex:writtenRep \"" + word + "\"@" + lang + "." +
 				"   ?source ontolex:lexicalForm ?form_source ." + 
 				"	?source lexinfo:partOfSpeech ?pos ." + 
@@ -45,7 +45,7 @@ public class SPARQLsearchesV2 {
 				"	?sense_target ontolex:isSenseOf  ?target ." + 
 				"	?lexicon lime:entry ?target ." + 
 				"	FILTER (?source != ?target)" + 
-				//"  }" + 
+				"  }" + 
 				"}";
 		Query query = QueryFactory.create(queryString);		 
 		QueryExecution qe = QueryExecutionFactory.sparqlService(getSparqlEndpoint(), query);
@@ -70,8 +70,8 @@ public class SPARQLsearchesV2 {
 					"PREFIX lime: <http://www.w3.org/ns/lemon/lime#>" + 
 					"SELECT DISTINCT ?source ?target" + 
 					"\nWHERE { " + 
-					//"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
-					//"    {" + 
+					"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
+					"    {" + 
 					"?sense_source ontolex:isSenseOf <" + sourceURI + ">." +
 					"{?trans vartrans:source ?sense_source;" + 
 					"        vartrans:target ?sense_target}UNION" + 
@@ -80,7 +80,7 @@ public class SPARQLsearchesV2 {
 					"?sense_source ontolex:isSenseOf  ?source . " + 
 					"?sense_target ontolex:isSenseOf  ?target . " + 
 					"FILTER (?source != ?target)" + 
-					//"  }" + 
+					"  }" + 
 					"}";		
 		Query query = QueryFactory.create(queryString);		 
 		QueryExecution qe = QueryExecutionFactory.sparqlService(getSparqlEndpoint(), query);
@@ -104,8 +104,8 @@ public class SPARQLsearchesV2 {
 				"PREFIX lime: <http://www.w3.org/ns/lemon/lime#>" + 
 				"SELECT DISTINCT ?writtenRep_source ?writtenRep_target ?pos_source" + 
 				"\nWHERE {" + 
-				//"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
-				//"    {" + 
+				"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
+				"    {" + 
 				"	?transSet a vartrans:TranslationSet ;" + 
 				"	     lime:language \"" + lang1 + "\" ;" +
 				"	     lime:language \"" + lang2 + "\" ;" +
@@ -124,7 +124,7 @@ public class SPARQLsearchesV2 {
 				"	?form_target ontolex:writtenRep ?writtenRep_target ." + 
 				"    FILTER(?pos_source = ?pos_target)" + 
 				"    FILTER(?lex_entry_source != ?lex_entry_target)" + 
-				//"}" +
+				"}" +
 				"}" + 
 				"ORDER BY ?writtenRep_source";	
 		
@@ -150,13 +150,13 @@ public class SPARQLsearchesV2 {
 				"PREFIX lime: <http://www.w3.org/ns/lemon/lime#>" + 
 				"SELECT DISTINCT ?written_rep" + 
 				"\nWHERE {" + 
-				//"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
-				//"    {" + 
+				"GRAPH <http://linguistic.linkeddata.es/id/apertium-lexinfo/>" + 
+				"    {" + 
 				"        ?lexicon lime:entry ?lex_entry ;" + 
 				"              	  lime:language \"" + lang + "\" ." + 
 				"        ?lex_entry ontolex:lexicalForm ?lex_form ." + 
 				"        ?lex_form ontolex:writtenRep ?written_rep .}" + 
-				//"}" + 
+				"}" + 
 				"ORDER BY ?written_rep";
 		Query query = QueryFactory.create(queryString);
 		QueryExecution qe = QueryExecutionFactory.sparqlService(getSparqlEndpoint(), query);

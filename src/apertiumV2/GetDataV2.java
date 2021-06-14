@@ -167,8 +167,8 @@ public class GetDataV2 {
 	}	
 	
 	public static void main (String [] args) {
-//		getContext("abbess");
-		createLexiconFile("as");
+		getContext("dog", "en", "fr");
+		//createLexiconFile("fr");
 	}
 	
 }
