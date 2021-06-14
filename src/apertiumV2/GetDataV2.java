@@ -19,6 +19,7 @@ public class GetDataV2 {
 	/**
 	 * 
 	 * Given a root word, it calculates its 'context' (list of translation pairs when looking for trans(trans(trans(root)))
+	 * that is, until a depth of four chained translations.
 	 * The method returns a Context Object, whose fields are: root word, translation pairs and uniq words
 	 *  
 	 */
@@ -167,7 +168,7 @@ public class GetDataV2 {
 	
 	public static void main (String [] args) {
 //		getContext("abbess");
-		createLexiconFile("ro");
+		createLexiconFile("as");
 	}
 	
 }

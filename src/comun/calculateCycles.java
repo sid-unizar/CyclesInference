@@ -213,13 +213,33 @@ public class calculateCycles {
 	}	
 	
 	/**
-	 * Read an input file which contains one root word per line. For each word, its context is obtained
-	 * and then start computation.
+	 *  It takes two lists of languages as input (input and output languages for which discover cycles-based translations).
+	 *  
+	 *  For each input language, it reads its corresponding lexicon file which contains one root word per line, as they appear 
+	 *  in the translation graph (Apertium RDF). The lexicon file needs to be pre-calculated and placed in the folder ./data/lexicons.
+	 *  For each root word, its context is obtained (that is, the chain of translations in the translation graph that 
+	 *  starts from such a root term). Then, it discovers the cycles to which the root term belongs to in the graph 
+	 *  and calculate the cycle density. The output results
+	 *  (candidate translations, along with their score and cycle path), are stored in an output file, in a folder ./data/translations/ .
+	 *  
+	 *  
+	 *  The pseudocode is:
+	 *    inputFile <- lexicon file for lang_source
+	 *    while inputFile not empty
+	 *    	root <- next line
+	 *      context <- getContext (root, langSource, langTarget)
+	 *      cycles <- getCycles (root, context, langSource_langTarget)
+	 *      write cycles in outputFile    
+	 *    end of while
 	 */				
 	public static void main(String [] args) {
 		
-		String [] langS = {args[0]};
-		String [] langT = {args[1]};
+		//String [] langS = {args[0]};
+		//String [] langT = {args[1]};
+	
+		String [] langS = {"en"};
+		String [] langT = {"fr"};
+		
 		String root;
 		try {
 			for (int i = 0; i < langS.length; i++) {
